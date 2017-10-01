@@ -28,6 +28,11 @@ Have the program find prime numbers until the user chooses to stop asking for th
 Fizz Buzz  
 --------------  
 Write a program that prints the numbers from 1 to n. But for multiples of three print “Fizz” instead of the number and for the multiples of five print “Buzz”. For numbers which are multiples of both three and five print “FizzBuzz”.  
+
 Dictionary Error  
 --------------  
-A program that checks if a python dictionary will error on a given input and if so handles the exception. 
+A program that checks if a python dictionary will error on a given input and if so handles the exception.  
+
+Calculator   
+--------------  
+Write a program given a string input evaluates the expression no matter the input.
