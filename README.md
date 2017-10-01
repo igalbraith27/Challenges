@@ -35,4 +35,8 @@ A program that checks if a python dictionary will error on a given input and if 
 
 Calculator   
 --------------  
-Write a program given a string input evaluates the expression no matter the input.
+Write a program given a string input evaluates the expression no matter the input.  
+
+Collatz Conjecture  
+--------------    
+Start with a number n > 1. Find the number of steps it takes to reach one using the following process: If n is even, divide it by 2. If n is odd, multiply it by 3 and add 1.
