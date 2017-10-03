@@ -38,8 +38,18 @@ Calculator
 Write a program given a string input evaluates the expression no matter the input.  
 
 Collatz Conjecture  
---------------    
+--------------     
 Start with a number n > 1. Find the number of steps it takes to reach one using the following process: If n is even, divide it by 2. If n is odd, multiply it by 3 and add 1.  
 Caesar cipher  
---------------    
-Implement a Caesar cipher, both encoding and decoding. The key is an integer from 1 to 25. This cipher rotates the letters of the alphabet (A to Z). The encoding replaces each letter with the 1st to 25th next letter in the alphabet (wrapping Z to A). So key 2 encrypts "HI" to "JK", but key 20 encrypts "HI" to "BC". This simple "monoalphabetic substitution cipher" provides almost no security, because an attacker who has the encoded message can either use frequency analysis to guess the key, or just try all 25 keys.
+--------------  
+
+Implement a Caesar cipher, both encoding and decoding. The key is an integer from 1 to 25. This cipher rotates the letters of the alphabet (A to Z). The encoding replaces each letter with the 1st to 25th next letter in the alphabet (wrapping Z to A). So key 2 encrypts "HI" to "JK", but key 20 encrypts "HI" to "BC". This simple "monoalphabetic substitution cipher" provides almost no security, because an attacker who has the encoded message can either use frequency analysis to guess the key, or just try all 25 keys.   
+
+Number Letter Counter  
+--------------  
+Write a program that accepts a sentence and calculate the number of letters and digits.  
+Suppose the following input is supplied to the program:  
+hello world! 123  
+Then, the output should be:
+LETTERS 10
+DIGITS 3
