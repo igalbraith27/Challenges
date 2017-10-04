@@ -38,8 +38,11 @@ Calculator
 Write a program given a string input evaluates the expression no matter the input.  
 
 Collatz Conjecture  
---------------     
+--------------   
+
 Start with a number n > 1. Find the number of steps it takes to reach one using the following process: If n is even, divide it by 2. If n is odd, multiply it by 3 and add 1.  
+  
+  
 Caesar cipher  
 --------------  
 
@@ -52,4 +55,8 @@ Suppose the following input is supplied to the program:
 hello world! 123  
 Then, the output should be:
 LETTERS 10
-DIGITS 3
+DIGITS 3  
+
+Stock Buy Sell to Maximize Profit  
+--------------  
+The cost of a stock on each day is given in an array, find the max profit that you can make by buying and selling in those days. For example, if the given array is {100, 180, 260, 310, 40, 535, 695}, the maximum profit can earned by buying on day 0, selling on day 3. Again buy on day 4 and sell on day 6. If the given array of prices is sorted in decreasing order, then profit cannot be earned at all.
