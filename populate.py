@@ -13,8 +13,8 @@ import sys
 def main(argv):
     n = int(argv[0])
     while n > 0:
-        num_commits = randint(0, 1)
-        if num_commits != 0:
+        num_commits = randint(0, 5)
+        while num_commits != 0:
             subprocess.run(["touch", "realwork.txt"])
             with open("realwork.txt", "a") as f:
                 f.write("new line\n")
@@ -23,7 +23,8 @@ def main(argv):
 #            subprocess.run(["git", "commit", "--date=\"%s".format(str(i)), "day", "ago\"", "-m" "\"added real work\""])
             subprocess.run(["git", "push"])
             sleep(.5)
-        n -= randint(0,3)
+            num_commits = num_commits - 1
+        n -= randint(1,3)
         if (num_commits != 0):
             subprocess.run(["git", "rm", "realwork.txt"])
             subprocess.call("git commit --date=\"{} day ago \" -m \"deleted realwork\"".format(str(n)))
