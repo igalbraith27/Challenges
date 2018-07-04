@@ -1,7 +1,7 @@
 from random import randint
 import subprocess
 from time import sleep
-
+import sys
 
 
 ############################
@@ -11,23 +11,25 @@ from time import sleep
 ############################
 
 def main(argv):
-	n = int(argv[0])
-	i = 0
-	while i <= n:
-		num_commits = randint(0, 1)
-		for commit in range(0, num_commits):
+    n = int(argv[0])
+    while n > 0:
+        num_commits = randint(0, 1)
+        if num_commits != 0:
             subprocess.run(["touch", "realwork.txt"])
             with open("realwork.txt", "a") as f:
                 f.write("new line\n")
             subprocess.run(["git", "add", "realwork.txt"])
-            subprocess.run(["git", "commit", "--date=\"%s".format(str(i)), "day", "ago\"", "-m" "\"added real work\""])
+            subprocess.call("git commit --date=\"{} day ago \" -m \"added realwork\"".format(str(n)))
+#            subprocess.run(["git", "commit", "--date=\"%s".format(str(i)), "day", "ago\"", "-m" "\"added real work\""])
             subprocess.run(["git", "push"])
-			sleep(.5)
-            subprocess.run("rm", "realwork.txt")
-            subprocess.run(["git", "commit", "--date=\"%s".format(str(i)), "day", "ago\"", "-m" "\"removed real work\""])
+            sleep(.5)
+        n -= randint(0,3)
+        if (num_commits != 0):
+            subprocess.run(["git", "rm", "realwork.txt"])
+            subprocess.call("git commit --date=\"{} day ago \" -m \"deleted realwork\"".format(str(n)))
+            #subprocess.run(["git", "commit", "--date=\"%s".format(str(i)), "day", "ago\"", "-m" "\"removed real work\""])
             subprocess.run(["git", "push"])
-			print("comittted")
-		i += randint(0,4)
+
 
 if __name__ == "__main__":
-	main(sys.argv[1:])
+    main(sys.argv[1:])
