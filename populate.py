@@ -13,7 +13,7 @@ import sys
 def main(argv):
     n = int(argv[0])
     while n > 0:
-        num_commits = randint(0, 5)
+        num_commits = randint(0, 6)
         while num_commits != 0:
             subprocess.run(["touch", "realwork.txt"])
             with open("realwork.txt", "a") as f:
